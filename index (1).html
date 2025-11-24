@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAONYX — الصفحة الرئيسية</title>
+  <style>
+    :root{--accent:#22c55e;--bg:#0b1020;--card:#0f1724;--glass:rgba(255,255,255,0.04)}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Naskh Arabic",sans-serif;background:linear-gradient(180deg,#071028 0%, #081428 100%);color:#e6eef8}
+    .container{max-width:1000px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:14px}
+    .logo{width:84px;height:84px;border-radius:999px;object-fit:cover;border:3px solid rgba(255,255,255,0.06);background:#071026}
+    h1{margin:0;font-size:22px}
+    .links{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--card);padding:10px 14px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.03)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#16a34a);color:#001005;border:none}
+    main{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .videos .video{display:flex;gap:12px;align-items:center;padding:8px;border-radius:8px}
+    .video img{width:120px;height:70px;object-fit:cover;border-radius:8px}
+    .small{font-size:13px;opacity:0.9}
+    /* hamburger */
+    .hamburger{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:10px;cursor:pointer}
+    .hamburger .lines{width:24px;height:2px;background:#cfe9ff;position:relative}
+    .hamburger .lines::before,.hamburger .lines::after{content:'';position:absolute;left:0;right:0;height:2px;background:#cfe9ff}
+    .hamburger .lines::before{top:-7px}
+    .hamburger .lines::after{top:7px}
+    /* sidebar */
+    .sidebar{position:fixed;top:18px;left:18px;right:auto;transform:translateX(0);direction:rtl}
+    .menu{position:fixed;top:64px;left:18px;width:280px;border-radius:12px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));backdrop-filter:blur(6px);display:none}
+    .menu.open{display:block}
+    .menu a{display:block;padding:10px;border-radius:8px;text-decoration:none;color:inherit}
+    .menu h3{margin:6px 0 12px 0}
+    /* pages */
+    .page{display:none}
+    .page.active{display:block}
+    .form-row{display:flex;gap:8px;margin-bottom:8px}
+    .form-row input,.form-row textarea{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit}
+    .send{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#10b981,#059669);color:white;border:none;cursor:pointer}
+    footer{margin-top:20px;text-align:center;opacity:0.75;font-size:13px}
+    @media (max-width:880px){main{grid-template-columns:1fr;}.sidebar{position:static;display:flex;justify-content:flex-end}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-wrap">
+        <img id="logoImg" class="logo" src="logo.jpg" alt="شعارك (استبدل logo.jpg)" onerror="this.src='https://via.placeholder.com/84?text=RA'">
+        <div>
+          <h1>RAONYX</h1>
+          <div class="small">أهلاً بك في الصفحة الرسمية — روابط السوشال أدناه</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="links">
+          <a class="btn" href="https://discord.gg/h8Sbq5DDX4" target="_blank" rel="noopener">ديسكورد</a>
+          <a class="btn" href="https://youtube.com/@r_aonyx?si=M_72Gc1oQ_Kp8Wu5" target="_blank" rel="noopener">قناتي</a>
+          <a class="btn" href="https://www.tiktok.com/@.r_aonyx?_r=1&_t=ZS-91fYjhifCEf" target="_blank" rel="noopener">تيك توك</a>
+        </div>
+
+        <div class="sidebar">
+          <div class="hamburger" id="hamburger" title="القائمة">
+            <div class="lines"></div>
+          </div>
+          <nav id="menu" class="menu" aria-hidden="true">
+            <h3>القائمة</h3>
+            <a href="#" data-open="overview">النظره العامه</a>
+            <hr style="opacity:0.06"/>
+            <details>
+              <summary style="cursor:pointer;padding:8px;border-radius:8px">شكاوي ماين كرافت ▾</summary>
+              <a href="#" data-open="complaint">شكاوي ماين</a>
+              <a href="#" data-open="unban">فك الباند</a>
+              <a href="#" data-open="suggestions">اقتراحات</a>
+              <a href="#" data-open="reviews">اراء</a>
+            </details>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card">
+          <h2>فيديوهات</h2>
+          <div class="videos">
+            <a class="video" href="https://youtu.be/yV-CanSmxrE?si=JxYnhJq6wIudq7rU" target="_blank">
+              <img src="https://img.youtube.com/vi/yV-CanSmxrE/hqdefault.jpg" alt="فيديو 1">
+              <div>
+                <div><strong>الفيديو الأول</strong></div>
+                <div class="small">yV-CanSmxrE</div>
+              </div>
+            </a>
+
+            <a class="video" href="https://youtu.be/_nULFJ676s0?si=FO8ZaVtQU2O9Xbve" target="_blank">
+              <img src="https://img.youtube.com/vi/_nULFJ676s0/hqdefault.jpg" alt="فيديو 2">
+              <div>
+                <div><strong>الفيديو الثاني</strong></div>
+                <div class="small">_nULFJ676s0</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div id="pages">
+          <div id="overview" class="card page active">
+            <h3>النظره العامه</h3>
+            <p class="small">هنا وصف عام للموقع، تقدر تعدل النص هذا بسهولة من ملف index.html</p>
+          </div>
+
+          <div id="complaint" class="card page">
+            <h3>شكاوي ماين</h3>
+            <p class="small">أرسل شكواك لصاحب الموقع عبر النموذج التالي:</p>
+            <div class="form-row"><input id="mcName" placeholder="اسمك في ماين كرافت"></div>
+            <div class="form-row"><textarea id="mcProblem" rows="4" placeholder="اشرح مشكلتك"></textarea></div>
+            <button class="send" id="sendComplaint">ارسال</button>
+          </div>
+
+          <div id="unban" class="card page">
+            <h3>فك الباند</h3>
+            <p class="small">املأ النموذج مع دليل يثبت براءتك:</p>
+            <div class="form-row"><input id="unName" placeholder="اسمك في ماين كرافت"></div>
+            <div class="form-row"><input id="unReason" placeholder="سبب الباند"></div>
+            <div class="form-row"><textarea id="unProof" rows="4" placeholder="دليلك (روابط أو صور)"></textarea></div>
+            <button class="send" id="sendUnban">ارسال</button>
+          </div>
+
+          <div id="suggestions" class="card page">
+            <h3>اقتراحات</h3>
+            <div class="form-row"><input id="suggName" placeholder="اسمك (اختياري)"></div>
+            <div class="form-row"><textarea id="suggText" rows="4" placeholder="اقتراحك"></textarea></div>
+            <button class="send" id="sendSugg">ارسال</button>
+          </div>
+
+          <div id="reviews" class="card page">
+            <h3>اراء</h3>
+            <div class="form-row"><input id="revName" placeholder="اسمك"></div>
+            <div class="form-row"><textarea id="revText" rows="4" placeholder="اراك او اقتراحك"></textarea></div>
+            <button class="send" id="sendRev">ارسال</button>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>روابط سريعة</h3>
+          <a class="btn" href="https://discord.gg/h8Sbq5DDX4" target="_blank">ديسكورد</a>
+          <a class="btn" href="https://youtube.com/@r_aonyx?si=M_72Gc1oQ_Kp8Wu5" target="_blank">قناتي</a>
+          <a class="btn" href="https://www.tiktok.com/@.r_aonyx?_r=1&_t=ZS-91fYjhifCEf" target="_blank">تيك توك</a>
+
+          <div style="height:10px"></div>
+          <p class="small">ملاحظة: أزرار الإرسال تفتح بريد إلكتروني مُجهز إلى <strong>raony0542@gmail.com</strong>.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      &copy; RAONYX — كل الحقوق محفوظة
+    </footer>
+  </div>
+
+  <script>
+    const menu = document.getElementById('menu');
+    document.getElementById('hamburger').addEventListener('click',()=>{
+      menu.classList.toggle('open');
+      menu.setAttribute('aria-hidden', String(!menu.classList.contains('open')));
+    });
+    document.querySelectorAll('[data-open]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('data-open');
+        document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        menu.classList.remove('open');
+      });
+    });
+
+    function mailTo(subject, body){
+      const ownerEmail = 'raony0542@gmail.com';
+      const href = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+    }
+
+    document.getElementById('sendComplaint').addEventListener('click',()=>{
+      const name = document.getElementById('mcName').value.trim();
+      const prob = document.getElementById('mcProblem').value.trim();
+      if(!name||!prob){alert('اكمل الحقول');return}
+      mailTo('شكوى ماين', `الاسم: ${name}\n\nالمشكلة:\n${prob}`);
+    });
+
+    document.getElementById('sendUnban').addEventListener('click',()=>{
+      const name = document.getElementById('unName').value.trim();
+      const reason = document.getElementById('unReason').value.trim();
+      const proof = document.getElementById('unProof').value.trim();
+      if(!name||!reason){alert('اكمل الحقول الضرورية');return}
+      mailTo('طلب فك باند', `الاسم: ${name}\nسبب الباند: ${reason}\n\nالدليل:\n${proof}`);
+    });
+
+    document.getElementById('sendSugg').addEventListener('click',()=>{
+      const name = document.getElementById('suggName').value.trim();
+      const text = document.getElementById('suggText').value.trim();
+      if(!text){alert('اكتب اقتراحك');return}
+      mailTo('اقتراح', `الاسم: ${name}\n\nالاقتراح:\n${text}`);
+    });
+
+    document.getElementById('sendRev').addEventListener('click',()=>{
+      const name = document.getElementById('revName').value.trim();
+      const text = document.getElementById('revText').value.trim();
+      if(!name||!text){alert('اكمل الحقول');return}
+      mailTo('رأي', `الاسم: ${name}\n\nالرأي:\n${text}`);
+    });
+  </script>
+</body>
+</html>
